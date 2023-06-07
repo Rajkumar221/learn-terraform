@@ -2,7 +2,7 @@ variable "sample" {
   default = 100
 }
 
-variable "sample" {
+variable "sample1" {
   default = "hellow world"
 }
 
