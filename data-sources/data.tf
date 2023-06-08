@@ -22,7 +22,7 @@ output "sgi" {
 }
 
 data "aws_ami" "example" {
-  owners      = ["amazon"]
+  owners      = ["973714476881"]
   most_recent = true
   name_regex  = "Centos-8-DevOps-Practice"
 }
