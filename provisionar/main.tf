@@ -8,6 +8,7 @@ resource "aws_instance" "web" {
 }
 
 provisioner "remote-exec" {
+
    connection {
     type     = "ssh"
     user     = "centos"
@@ -16,7 +17,7 @@ provisioner "remote-exec" {
   }
     inline = [
       "sudo lab auto ansibe",
-      "ansible-pull -i localhost, -U https://github.com/Rajkumar221/roboshop-ansible.git -e main.yml -e roll_name=frontend ",
+      "ansible-pull -i localhost, -U https://github.com/Rajkumar221/roboshop-ansible.git  main.yml -e roll_name=frontend ",
     ]
   }
 
