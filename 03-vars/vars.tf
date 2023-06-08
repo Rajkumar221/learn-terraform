@@ -20,6 +20,10 @@ output "sample-ext" {
   value = "value of sample - ${var.sample}"
 }
 
+output "sample-ext" {
+  value = "value of sample & sample1 - ${var.sample} - ${var.sample1}"
+}
+
 # variable types plain, list , map
 #plain
 variable "course" {
@@ -67,4 +71,13 @@ output "course_details" {
 
 output "course_details" {
     value = var.course_details["DevOps"]
+}
+
+
+
+variable "env" { }
+
+
+output "env" {
+  value = "env"
 }
