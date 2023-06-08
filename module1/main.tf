@@ -9,9 +9,9 @@ module "sample2" {
 }
 
 output "public_ip_sample1" {
-  value = module.sampl1.public_ip
+  value = module.sample1.public_ip
 }
 
 output "public_ip_sample2" {
-  value = module.sampl1.public_ip
+  value = module.sample2.public_ip
 }
