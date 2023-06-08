@@ -21,13 +21,3 @@ output "sgi" {
     value = data.aws_security_group.selected.id
 }
 
-data "aws_ami" "example" {
-    owners = ["amazon"]
-    most_recent = true
-    name_regex = "Centos-8-Devops-Practice"
-}
-
-output "ami" {
-  value = data.aws_ami.example.id
-}
-
