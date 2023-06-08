@@ -56,9 +56,15 @@ output "couse" {
 }
 
 output "courses" {
-  value = var.courses
+   value = var.courses
 }
 
 output "course_details" {
-  value = var.course_details
+   value = var.course_details
+} 
+
+#if we want one value in between aws and DevOps
+
+output "course_details" {
+    value = var.course_details["DevOps"]
 }
