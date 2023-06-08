@@ -1,13 +1,13 @@
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.example.id
-  instance_type = "t3.micro"
+  ami                    = data.aws_ami.example.id
+  instance_type          = "t3.micro"
+  vpc_security_group_ids = ["sg-08b043c018c643809"]
 
   tags = {
     Name = "HelloWorld"
   }
 
-
- provisioner "remote-exec" {
+  provisioner "remote-exec" {
 
     connection {
       type     = "ssh"
@@ -23,7 +23,6 @@ resource "aws_instance" "web" {
   }
 
 }
-
 
 data "aws_ami" "example" {
   owners      = ["973714476881"]
