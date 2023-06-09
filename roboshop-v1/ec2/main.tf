@@ -23,9 +23,10 @@ provisioner "remote-exec" {
     ]
   }
 }
+
 resource "aws_route53_record" "www" {
   zone_id = "Z00341801T5F6KEOKBT7X"
-  name    = "${var.name}.-dev"
+  name    = "${var.name}-dev"
   type    = "A"
   ttl     = 30
   records = [aws_instance.web.private_ip]
