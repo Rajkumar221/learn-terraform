@@ -6,7 +6,7 @@ resource "aws_instance" "web" {
   tags = {
     Name = var.name
   }
-}
+
 
 provisioner "remote-exec" {
 
@@ -22,7 +22,7 @@ provisioner "remote-exec" {
       "ansible-pull -i localhost, -U https://github.com/Rajkumar221/roboshop-ansible.git main.yml -e role_name=${var.name}"
     ]
   }
-
+}
 resource "aws_route53_record" "www" {
   zone_id = "Z00341801T5F6KEOKBT7X"
   name    = "${var.name}.-dev"
